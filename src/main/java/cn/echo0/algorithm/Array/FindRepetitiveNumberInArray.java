@@ -3,7 +3,7 @@
  * Email  : ech0.extreme@foxmail.com
  * Time   : Jun 28, 2017 3:08:58 PM
  */
-package cn.echo0.algorithm;
+package cn.echo0.algorithm.Array;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -60,7 +60,6 @@ public class FindRepetitiveNumberInArray {
         }
         return -1;
     }
-
     public static int countRange(int[] intArray, int start, int end) {
         int count = 0;
         for (int i = 0; i < intArray.length; i++) {
