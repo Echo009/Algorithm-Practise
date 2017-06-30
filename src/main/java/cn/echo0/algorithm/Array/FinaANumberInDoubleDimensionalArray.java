@@ -10,7 +10,6 @@ package cn.echo0.algorithm.Array;
  * @author Ech0
  */
 public class FinaANumberInDoubleDimensionalArray {
-
 //    在一个二维数组中，每一行都按照从左到右递增的顺序排列，每一列都按照从上到下递增的顺序排列
 //    在这个数组中查找某个整数 
     public static boolean finaANumberInDoubleDimensionalArray(int[][] array, int targetNum) {
@@ -42,7 +41,6 @@ public class FinaANumberInDoubleDimensionalArray {
         }
         return false;
     }
-
     public static void main(String[] args) {
         int[][] array = new int[3][];
         array[0] = new int[]{1, 4, 6, 9};
