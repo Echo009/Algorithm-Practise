@@ -3,7 +3,7 @@
  * Email  : ech0.extreme@foxmail.com
  * Time   : Jun 28, 2017 3:08:58 PM
  */
-package cn.echo0.algorithm.Array;
+package cn.echo0.algorithm.array;
 
 import java.util.Arrays;
 import java.util.Random;

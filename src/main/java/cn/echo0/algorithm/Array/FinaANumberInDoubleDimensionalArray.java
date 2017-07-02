@@ -3,7 +3,7 @@
  * Email  : ech0.extreme@foxmail.com
  * Time   : Jun 29, 2017 8:34:19 AM
  */
-package cn.echo0.algorithm.Array;
+package cn.echo0.algorithm.array;
 
 /**
  *
