@@ -18,8 +18,4 @@ public class SimpleBinaryTreeNode {
     SimpleBinaryTreeNode(int rootValue) {
         value = rootValue;
     }
-
-   
-
-  
 }
