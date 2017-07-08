@@ -1,4 +1,4 @@
-package cn.echo0.algorithm.Sequence;
+package cn.echo0.algorithm.sequence;
 
 /**
  * Email     : ech0.extreme@foxmail.com
