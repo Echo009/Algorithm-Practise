@@ -6,11 +6,10 @@
 package cn.echo0.algorithm.array;
 
 /**
- *
  * @author Ech0
  */
 public class FinaANumberInDoubleDimensionalArray {
-//    在一个二维数组中，每一行都按照从左到右递增的顺序排列，每一列都按照从上到下递增的顺序排列
+    //    在一个二维数组中，每一行都按照从左到右递增的顺序排列，每一列都按照从上到下递增的顺序排列
 //    在这个数组中查找某个整数 
     public static boolean finaANumberInDoubleDimensionalArray(int[][] array, int targetNum) {
         if (array == null) {
@@ -26,7 +25,7 @@ public class FinaANumberInDoubleDimensionalArray {
         if (columns == 0) {
             return false;
         }
-        {//try to find the targetNum  
+        {//try to find the targetNum
             int row = 0;
             int column = columns - 1;
             while (row <= rows - 1 && column >= 0) {
@@ -34,13 +33,14 @@ public class FinaANumberInDoubleDimensionalArray {
                     return true;
                 } else if (array[row][column] > targetNum) {//pervious column
                     column--;
-                } else {// next row 
+                } else {// next row
                     row++;
                 }
             }
         }
         return false;
     }
+
     public static void main(String[] args) {
         int[][] array = new int[3][];
         array[0] = new int[]{1, 4, 6, 9};
@@ -48,4 +48,5 @@ public class FinaANumberInDoubleDimensionalArray {
         array[2] = new int[]{5, 22, 55, 99};
         System.out.println(finaANumberInDoubleDimensionalArray(array, 5));
     }
+
 }
