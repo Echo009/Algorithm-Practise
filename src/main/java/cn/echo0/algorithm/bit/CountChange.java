@@ -16,7 +16,7 @@ public class CountChange {
         }
         return count;
     }
-                                                    
+
     public static void main(String[] args) {
         System.out.println(countChange(9, 18));
     }

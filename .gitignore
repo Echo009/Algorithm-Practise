@@ -46,6 +46,7 @@ Temporary Items
 .apdisk
 /target/
 .idea/*
-.iml
+*.iml
 .idea/
 src/main/main.iml
+*.log
