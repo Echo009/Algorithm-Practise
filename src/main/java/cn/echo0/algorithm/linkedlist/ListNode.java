@@ -5,6 +5,8 @@
  */
 package cn.echo0.algorithm.linkedlist;
 
+import java.util.List;
+
 /**
  *
  * @author Ech0
@@ -35,11 +37,22 @@ public class ListNode<T> {
         }
         return intLIst;
     }
-
+    public static void printLinkedList(ListNode list){
+        for(ListNode temp = list ;temp!=null;temp=temp.next){
+            System.out.print(temp.value+ " ");
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         ListNode intList  = genSimpleIntLinkedList() ;
-        for(ListNode temp = intList ;temp!=null;temp=temp.next){
-            System.out.println(temp.value);
-        }
+        printLinkedList(intList);
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "value=" + value +
+                ", next=" + next +
+                '}';
     }
 }
