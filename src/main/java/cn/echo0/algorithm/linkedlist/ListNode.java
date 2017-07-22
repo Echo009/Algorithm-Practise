@@ -37,6 +37,16 @@ public class ListNode<T> {
         }
         return intLIst;
     }
+    public static ListNode genSimpleIntLinkedList(int n) {
+        ListNode<Integer> intLIst = new ListNode(0);
+        ListNode temp = intLIst ;
+        for (int i = 1; i <= n; i++) {
+            ListNode<Integer> newNode = new ListNode(i);
+            temp.next = newNode ;
+            temp = newNode ;
+        }
+        return intLIst;
+    }
     public static void printLinkedList(ListNode list){
         for(ListNode temp = list ;temp!=null;temp=temp.next){
             System.out.print(temp.value+ " ");
