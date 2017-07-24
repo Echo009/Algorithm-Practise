@@ -96,6 +96,9 @@ public class ConstructBinaryTree {
     private static int[] inOrder = {4, 7, 2, 1, 5, 3, 8, 6};
 
     public static void preOrder(SimpleBinaryTreeNode root) {
+        if (root==null){
+            return;
+        }
         System.out.print(root.value + "  ");
         if (root.leftNode != null) {
             preOrder(root.leftNode);
