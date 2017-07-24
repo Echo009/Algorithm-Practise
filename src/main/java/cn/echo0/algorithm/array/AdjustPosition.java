@@ -1,8 +1,7 @@
 package cn.echo0.algorithm.array;
 
 import java.util.Arrays;
-import java.util.Random;
-import java.util.stream.Stream;
+
 
 /**
  * Author : Ech0
