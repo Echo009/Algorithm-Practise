@@ -1,7 +1,5 @@
 package cn.echo0.algorithm.array;
 
-import java.util.Scanner;
-
 /**
  * Author : Ech0
  * Email  : ech0.extreme@foxmail.com
