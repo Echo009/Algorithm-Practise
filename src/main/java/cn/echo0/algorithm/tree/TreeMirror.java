@@ -23,10 +23,27 @@ public class TreeMirror {
 
 
     }
+    public static boolean isSymmetrical(SimpleBinaryTreeNode tree){
+        return isSymmetrical(tree,tree);
+    }
+    private static boolean isSymmetrical(SimpleBinaryTreeNode tree1,SimpleBinaryTreeNode tree2){
+        if(tree1==null&&tree2==null){
+            return true;
+        }
+        if(tree1==null||tree2==null){
+            return false;
+        }
+        if(tree1.value!=tree2.value){
+            return false;
+        }
+        return isSymmetrical(tree1.leftNode,tree2.rightNode)
+                &&isSymmetrical(tree1.rightNode,tree2.leftNode);
+    }
 
     public static void main(String[] args) {
         SimpleBinaryTreeNode treeNode = GenSimpleTree.getTree();
         mirrorRecursively(treeNode);
        ConstructBinaryTree.preOrder(treeNode);
+        System.out.println(isSymmetrical(null));
     }
 }

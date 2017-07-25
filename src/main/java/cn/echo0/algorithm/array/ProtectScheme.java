@@ -22,7 +22,7 @@ public class ProtectScheme {
         int length = mountains.length;
         int sum = length ;
 
-        for (;i<length;i++){
+        for (int i=0;i<length;i++){
             //TODO
         }
         return sum;
