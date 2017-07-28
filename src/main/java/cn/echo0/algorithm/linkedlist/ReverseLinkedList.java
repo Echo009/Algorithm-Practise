@@ -42,11 +42,9 @@ public class ReverseLinkedList {
         ListNode perNode = null;
         while (currentNode!=null){
             ListNode nextNode =currentNode.next;
-            nextNode = currentNode.next;
             if(nextNode==null){
                 reversedList = currentNode;
             }
-
             currentNode.next=perNode;
 
             perNode=currentNode;

@@ -18,4 +18,11 @@ public class SimpleBinaryTreeNode {
     SimpleBinaryTreeNode(int rootValue) {
         value = rootValue;
     }
+
+    @Override
+    public String toString() {
+        return "SimpleBinaryTreeNode{" +
+                "value=" + value+
+                '}';
+    }
 }
