@@ -34,7 +34,6 @@ public class QuickSort {
                     Swap.swapIntArray(array, i, j);
                 }
             }
-            array[i] = pivot;
             sort(array, start, i - 1);
             sort(array, i + 1, end);
         }

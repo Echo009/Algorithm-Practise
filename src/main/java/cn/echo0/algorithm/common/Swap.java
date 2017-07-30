@@ -9,6 +9,12 @@ import java.util.Arrays;
  */
 public class Swap {
     public static void swapIntArray(int[] array , int i , int j ){
+        if(array[i]==array[j]){
+            int temp = array[i];
+            array[i]=array[j];
+            array[j]=array[i];
+            return;
+        }
         array[i]=array[j]^array[i];
         array[j]=array[i]^array[j];
         array[i]=array[i]^array[j];
