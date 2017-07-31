@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  */
 public class GenArray {
     public static int [] genIntArray (int length ){
-       return IntStream.generate(()->new Random().nextInt(1888)).limit(length).toArray();
+       return IntStream.generate(()->new Random().nextInt(1888)-1000).limit(length).toArray();
     }
 
     public static void main(String[] args) {
