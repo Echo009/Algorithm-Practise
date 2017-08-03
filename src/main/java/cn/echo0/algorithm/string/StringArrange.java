@@ -38,6 +38,6 @@ public class StringArrange {
     }
 
     public static void main(String[] args) {
-        permutation("lovelanlan".toCharArray());
+        permutation("123".toCharArray());
     }
 }
