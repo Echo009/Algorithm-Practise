@@ -7,7 +7,7 @@ package cn.echo0.algorithm.tree;
  */
 public class VeritySquenceOfBST {
     /**
-     * 判断该序列是否可能是一颗二叉树的后序遍历,该序列中没有重复节点
+     * 判断该序列是否可能是一颗排序二叉树的后序遍历,该序列中没有重复节点
      * @param squence
      * @return
      */
