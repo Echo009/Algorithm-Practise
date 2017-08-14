@@ -34,7 +34,7 @@ public class AdjustPosition {
     }
 
     public static void main(String[] args) {
-        int[] intArray = {1,4,5,6,8,9,0,3,2,7};
+        int[] intArray = {1, 4, 5, 6, 8, 9, 0, 3, 2, 7};
         adjustPostion(intArray);
         System.out.println(Arrays.toString(intArray));
 

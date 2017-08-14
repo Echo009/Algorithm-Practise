@@ -13,11 +13,11 @@ import java.util.Scanner;
 public class ChessSolutions {
     private static int x[];
     private static int y[];
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in
         );
         int n = sc.nextInt();
-        sc.
         x = new int[n];
         y = new int[n];
         for (int i = 0; i < n; i++) {
@@ -40,19 +40,19 @@ public class ChessSolutions {
             Arrays.sort(distance[i]);
         }
         int min[] = new int[n * n];
-        for (int j = 0 ; j < n ; j++ ){
+        for (int j = 0; j < n; j++) {
             int minMove = Integer.MAX_VALUE;
             for (int i = 0; i < n * n; i++) {
-                min[i]+=distance[i][j];
-                if(min[i]<minMove){
+                min[i] += distance[i][j];
+                if (min[i] < minMove) {
                     minMove = min[i];
                 }
             }
-            if (j==n-1){
+            if (j == n - 1) {
                 System.out.println(minMove);
                 return;
             }
-            System.out.print(minMove+" ");
+            System.out.print(minMove + " ");
         }
 
     }

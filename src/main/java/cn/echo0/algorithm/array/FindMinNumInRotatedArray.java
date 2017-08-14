@@ -40,13 +40,13 @@ public class FindMinNumInRotatedArray {
     public static int finMInInOrder(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
-            min = (min < array[i]) ? min :  array[i];
+            min = (min < array[i]) ? min : array[i];
         }
         return min;
     }
 
     public static void main(String[] args) throws Exception {
-        int [] array = {1,1,1,0,1};
+        int[] array = {1, 1, 1, 0, 1};
         System.out.println(findMinNumber(array));
     }
 }

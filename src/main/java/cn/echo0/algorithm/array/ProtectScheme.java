@@ -9,20 +9,21 @@ import java.util.Scanner;
  */
 public class ProtectScheme {
     //保卫方案
-    public static void main(String []args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numCount = scanner.nextInt();
         int i = 0;
-        int mountains[]=new int[numCount];
-        for (;i<numCount;i++){
-            mountains[i]=scanner.nextInt();
+        int mountains[] = new int[numCount];
+        for (; i < numCount; i++) {
+            mountains[i] = scanner.nextInt();
         }
     }
-    public static int countPair(int[] mountains){
-        int length = mountains.length;
-        int sum = length ;
 
-        for (int i=0;i<length;i++){
+    public static int countPair(int[] mountains) {
+        int length = mountains.length;
+        int sum = length;
+
+        for (int i = 0; i < length; i++) {
             //TODO
         }
         return sum;

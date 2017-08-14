@@ -13,28 +13,28 @@ public class FindNumAppearOnce {
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException();
         }
-        int []num=new int[32];
-        for (int i = 0 ; i< array.length; i++ ){
-            int bitMask = 1 ;
-            for (int j = 0; j < 32 ; j++ ){
-                if ((array[i]&bitMask)!=0){
+        int[] num = new int[32];
+        for (int i = 0; i < array.length; i++) {
+            int bitMask = 1;
+            for (int j = 0; j < 32; j++) {
+                if ((array[i] & bitMask) != 0) {
                     num[j]++;
                 }
-                bitMask=bitMask<<1;
+                bitMask = bitMask << 1;
             }
         }
         System.out.println(Arrays.toString(num));
         int result = 0;
-        int bitMask = 1 ;
-        for (int i = 0;i<32 ;i++){
-            result +=  num[i]%3==0?0:bitMask;
-            bitMask=bitMask<<1;
+        int bitMask = 1;
+        for (int i = 0; i < 32; i++) {
+            result += num[i] % 3 == 0 ? 0 : bitMask;
+            bitMask = bitMask << 1;
         }
         return result;
     }
 
     public static void main(String[] args) {
-        int [] array = new int[]{2,2,2,3,3,3,-1,4,5,-1,4,5,4,5,-1,0};
+        int[] array = new int[]{2, 2, 2, 3, 3, 3, -1, 4, 5, -1, 4, 5, 4, 5, -1, 0};
         System.out.println(findNumAppearOnce(array));
     }
 }

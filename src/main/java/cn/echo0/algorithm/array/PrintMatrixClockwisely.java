@@ -23,24 +23,24 @@ public class PrintMatrixClockwisely {
 
 //        从左到右打印一行
         for (int i = start; i <= endX; i++) {
-            System.out.print(matrix[start][i]+" ");
+            System.out.print(matrix[start][i] + " ");
         }
 //        从上到下打印一列
         if (start < endY) {
             for (int i = start + 1; i <= endY; i++) {
-                System.out.print(matrix[i][endX]+" ");
+                System.out.print(matrix[i][endX] + " ");
             }
         }
 //        从右至左打印一行
         if (start < endX && start < endY) {
             for (int i = endX - 1; i >= start; i--) {
-                System.out.print(matrix[endY][i]+" ");
+                System.out.print(matrix[endY][i] + " ");
             }
         }
 //        从下到上打印一列
         if (start < endX && start < endY - 1) {
             for (int i = endY - 1; i > start; i--) {
-                System.out.print(matrix[i][start]+" ");
+                System.out.print(matrix[i][start] + " ");
             }
         }
     }

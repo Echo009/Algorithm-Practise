@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- *
  * @author Ech0
  */
 public class FindRepetitiveNumberInArray {
@@ -60,6 +59,7 @@ public class FindRepetitiveNumberInArray {
         }
         return -1;
     }
+
     public static int countRange(int[] intArray, int start, int end) {
         int count = 0;
         for (int i = 0; i < intArray.length; i++) {
