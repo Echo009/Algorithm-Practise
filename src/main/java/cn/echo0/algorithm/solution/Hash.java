@@ -1,23 +1,24 @@
 package cn.echo0.algorithm.solution;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
  * Author : Ech0
  * Email  : ech0.extreme@foxmail.com
- * Time   : 08/15/2017 09:14 PM
+ * Time   : 08/16/2017 10:53 AM
  */
-public class Template {
+public class Hash {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n=scanner.nextInt();
-        int []array=new int[n];
-        for (int i = 0; i<n;i++){
-            array[i]=scanner.nextInt();
-        }
-
+        HashSet<String> container =new HashSet<>(50);
         while (scanner.hasNext()){
             String str = scanner.nextLine();
+            String[] strings = str.split(" ");
+            for (String temp : strings){
+                container.add(temp);
+            }
         }
+        System.out.println(container.size());
     }
 }
