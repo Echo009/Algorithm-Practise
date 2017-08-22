@@ -1,13 +1,14 @@
 package cn.echo0.algorithm.dynamic;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Author : Ech0
  * Email  : ech0.extreme@foxmail.com
  * Time   : 08/02/2017 06:50 PM
  */
-public class MaxValueOfGifs {
+public class MaxValueOfGifs  {
     //    在一个m*n的棋盘的每一格都有放一个礼物，每一个礼物 都有一定的价值>0。
 //    你可以从棋盘的左上角开始拿格子里的礼物，并且每次向左或者向下移动一格，直到到达棋盘的右下角为止 。
 //    给定一个棋盘以及上面的礼物，请计算你最多能拿到多少价值的礼物？
@@ -49,6 +50,7 @@ public class MaxValueOfGifs {
         matrix[2] = new int[]{5, 7, 4, 11};
         matrix[3] = new int[]{3, 7, 16, 5};
         System.out.println(maxValueOfGifs(matrix));
+        System.out.println(1.0/0);
     }
 
 }
