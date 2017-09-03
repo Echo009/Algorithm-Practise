@@ -15,17 +15,17 @@ public class Solution {
     public static int calculateMax(int[] prices) {
         int max = 0;
         if (prices.length <= 3) {
-            return findMaxProfit(prices, 0, prices.length - 1);
+            return maxProfit(prices, 0, prices.length - 1);
         }
         for (int i = 0; i < prices.length ; i++) {
             int currentProfit;
             if(i==0){
-                currentProfit = findMaxProfit(prices, 0, prices.length-1);
+                currentProfit = maxProfit(prices, 0, prices.length-1);
             }else if(i>=prices.length-2){
-                currentProfit = findMaxProfit(prices,0,i);
+                currentProfit = maxProfit(prices,0,i);
             }
             else {
-                currentProfit = findMaxProfit(prices, 0, i) + findMaxProfit(prices, i + 1, prices.length - 1);
+                currentProfit = maxProfit(prices, 0, i) + maxProfit(prices, i + 1, prices.length - 1);
             }
             if (max < currentProfit) {
                 max = currentProfit;
@@ -47,6 +47,23 @@ public class Solution {
             }
         }
         return max;
+    }
+    public static int maxProfit(int[] prices,int start , int end ) {
+        int len = prices.length;
+        if(len==0){
+            return 0;
+        }
+        int currentMinValue = Integer.MAX_VALUE;
+        int result = 0;
+        for(int i= start; i<=end ; i++){
+            if(currentMinValue>prices[i]){
+                currentMinValue = prices[i];
+            }else{
+                result = result < prices[i] - currentMinValue ? prices[i]-currentMinValue : result ;
+            }
+
+        }
+        return result ;
     }
 
     public static void main(String[] args) {
