@@ -1,6 +1,8 @@
 package cn.echo0.algorithm.linkedlist;
 
 
+import java.util.HashMap;
+
 /**
  * Author : Ech0
  * Email  : ech0.extreme@foxmail.com
@@ -80,6 +82,7 @@ public class FindLoopEntrance {
     }
 
     public static void main(String[] args) {
-        System.out.println(findEntranceOfLoop(genSimpleLoopList(1,10)).value);
+        System.out.println(findEntranceOfLoop(genSimpleLoopList(1, 10)).value);
+
     }
 }
