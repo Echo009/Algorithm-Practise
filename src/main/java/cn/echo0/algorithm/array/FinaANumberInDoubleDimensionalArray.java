@@ -5,6 +5,8 @@
  */
 package cn.echo0.algorithm.array;
 
+import java.util.regex.Pattern;
+
 /**
  * @author Ech0
  */
@@ -44,9 +46,11 @@ public class FinaANumberInDoubleDimensionalArray {
     public static void main(String[] args) {
         int[][] array = new int[3][];
         array[0] = new int[]{1, 4, 6, 9};
-        array[1] = new int[]{2, 10, 68, 77};
+        array[1] = new int[]{4, 10, 68, 77};
         array[2] = new int[]{5, 22, 55, 99};
-        System.out.println(finaANumberInDoubleDimensionalArray(array, 5));
+        System.out.println(finaANumberInDoubleDimensionalArray(array, 3));
+        StringBuffer sb = new StringBuffer();
+
     }
 
 }

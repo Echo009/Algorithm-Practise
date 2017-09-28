@@ -31,6 +31,6 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        System.out.println(getPos(new int[]{1, 2, 3, 5}, 4, 1));
+        System.out.println(getPos(new int[]{1, 2, 3, 5}, 4, 2));
     }
 }

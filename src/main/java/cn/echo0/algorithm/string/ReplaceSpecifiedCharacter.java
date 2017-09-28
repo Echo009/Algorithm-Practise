@@ -38,11 +38,16 @@ public class ReplaceSpecifiedCharacter {
         }
         return result;
     }
+    public static String replaceAllSpace(StringBuffer target){
+        return target.toString().replaceAll("\\s","%20");
+    }
 
     public static void main(String[] args) {
         String str = "hey, are you happy ?  do you know that ? is great to fall in love with you !  ";
         char[] string =str.toCharArray();
         System.out.println(string);
         System.out.println(replaceSpecifiedCharacter(string));
+
+
     }
 }
