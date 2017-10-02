@@ -34,28 +34,20 @@ public class ReverseLinkedList {
     }
 //    反转一个链表
     public static ListNode reverseList(ListNode list){
-        if(list == null){
-            return null;
-        }
-        ListNode reversedList = null;
         ListNode currentNode = list;
         ListNode perNode = null;
         while (currentNode!=null){
             ListNode nextNode =currentNode.next;
-            if(nextNode==null){
-                reversedList = currentNode;
-            }
             currentNode.next=perNode;
-
             perNode=currentNode;
             currentNode=nextNode;
         }
-        return reversedList;
+        return perNode;
     }
     public static void main(String[] args) {
 //        printReversedLinkedList(ListNode.genSimpleIntLinkedList());
         System.out.println("");
-        printReversedListRecursive(ListNode.genSimpleIntLinkedList());
+//        printReversedListRecursive(ListNode.genSimpleIntLinkedList());
         System.out.println(reverseList(ListNode.genSimpleIntLinkedList()));
     }
 }

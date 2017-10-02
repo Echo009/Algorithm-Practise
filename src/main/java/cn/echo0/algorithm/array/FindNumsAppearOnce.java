@@ -51,5 +51,6 @@ public class FindNumsAppearOnce {
     public static void main(String[] args) {
         int[] arrray = new int[]{1, 2, 3, 4, 5, 5, 6, 6, 4, 3};
         findNumsAppearOnce(arrray);
+
     }
 }

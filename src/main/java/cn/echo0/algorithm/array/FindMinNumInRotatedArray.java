@@ -8,33 +8,27 @@ package cn.echo0.algorithm.array;
 public class FindMinNumInRotatedArray {
     //  将一个排好序的数组 的前面的若干个数整体移动到数组的末尾，这样的数组成为旋转数组，现给出一个旋转数组
     //  请找出数组中最小的元素
-    public static int findMinNumber(int[] array) throws Exception {
-        if (array == null || array.length == 0)
-            throw new Exception("Incorrect argument ! ");
-        if (array.length == 1) {
-            return array[0];
+    public static int findMinNumber(int[] array) {
+        if(array==null||array.length==0){
+            return 0;
         }
-        int index1 = 0;
-        int index2 = array.length - 1;
-        int middleIndex = index1;
-        while (index1 < index2) {
-            if (array[index1] < array[index2]) {//数组没有被旋转
-                return array[middleIndex];
-            }
-            if (index1 == index2 - 1) {
+        int left = 0 ;
+        int right = array.length-1;
+        int middle = left ;
+        while(array[left] >= array[right]){
+            if(left+1==right){
                 break;
             }
-            middleIndex = (index1 + index2) / 2;
-            if (array[middleIndex] > array[index1]) // 在后半部分
-            {
-                index1 = middleIndex;
-            } else if (array[middleIndex] < array[index2]) {// 在前半部分
-                index2 = middleIndex;
-            } else if (array[middleIndex] == array[index1] && array[index1] == array[index2]) {
+            middle = left + ((right-left)>>1);
+            if(array[left]==array[middle]&&array[middle]==array[right]){
                 return finMInInOrder(array);
             }
+            if(array[middle]<array[left]){
+                right=middle;
+            }else
+                left=middle;
         }
-        return array[index2];
+        return array[right];
     }
 
     public static int finMInInOrder(int[] array) {
@@ -46,7 +40,7 @@ public class FindMinNumInRotatedArray {
     }
 
     public static void main(String[] args) throws Exception {
-        int[] array = {1, 1, 1, 0, 1};
+        int[] array = {1, 2 , 6 , 0, 1};
         System.out.println(findMinNumber(array));
     }
 }
