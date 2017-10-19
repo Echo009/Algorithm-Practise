@@ -10,7 +10,7 @@ public class SearchFNumNearTarget {
     // 从浮点数数组中找到最接近给定数字的数的下标 <= target
 
    static double [] array  = new double[]{0.88,2.99,4.88,5.89,6.78
-            ,6,88,7.99,8.99,8.999,9.78};
+            ,6.88,7.99,8.99,8.999,9.78};
 
     public static int findIdxOfTargetNum(double[]array ,  double target){
 
@@ -20,8 +20,14 @@ public class SearchFNumNearTarget {
         int begin , end ;
         begin = 0 ; end = len -1 ;
         int mid ;
+        if (array[0]>target){
+            return -1;
+        }
+        if (array[len-1]<target){
+            return -1;
+        }
         while (begin<end){
-            mid = begin + (end-begin) / 2 ;
+            mid = (begin + end )/ 2 ;
             if (array[mid]==target){
                 return mid;
             }
@@ -32,9 +38,9 @@ public class SearchFNumNearTarget {
                 return mid-1;
             }
             if (array[mid]<target){
-                begin = mid;
+                begin = mid+1;
             }else if (array[mid]>target){
-                end = mid ;
+                end = mid-1 ;
             }
         }
 
@@ -43,7 +49,7 @@ public class SearchFNumNearTarget {
 
     public static void main(String[] args) {
 
-        System.out.println(findIdxOfTargetNum(array,10));
+        System.out.println(findIdxOfTargetNum(array,99));
 
     }
 
